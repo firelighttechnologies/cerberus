@@ -11,6 +11,6 @@ ADD composer-install.sh /var/composer-install.sh
 RUN chmod +x /var/composer-install.sh
 Run /var/composer-install.sh
 RUN mv composer.phar /usr/local/bin/composer
-#RUN composer require slim/slim "3.0"
+RUN composer require lcobucci/jwt "3.2"
 #RUN a2enmod rewrite
 ADD public/* /var/www/html/
