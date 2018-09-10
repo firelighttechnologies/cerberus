@@ -14,8 +14,8 @@ RUN chmod +x /var/composer-install.sh \
 #RUN composer require lcobucci/jwt "3.2"
 RUN a2enmod rewrite
 #ADD public/* /var/www/html/
-WORKDIR /var/www/html/ \
-    RUN wget https://github.com/mudmin/UserSpice43dev/archive/master.zip \
+WORKDIR /var/www/html/
+RUN wget https://github.com/mudmin/UserSpice43dev/archive/master.zip \
     && unzip master.zip \
     && cp -R /var/www/html/UserSpice43dev-master/* /var/www/html/ \
     && rm -Rf /var/www/html/UserSpice43dev-master \
