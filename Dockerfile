@@ -17,9 +17,9 @@ RUN a2enmod rewrite
 WORKDIR /var/www/html/
 RUN wget https://github.com/mudmin/UserSpice43dev/archive/master.zip \
     && unzip master.zip \
-    && cp -R /var/www/html/UserSpice43dev-master/* /var/www/html/ 
+    && cp -R /var/www/html/UserSpice43dev-master/* /var/www/html/
 #    && rm -Rf /var/www/html/UserSpice43dev-master \
 #    && rm master.zip \
 #    && rm -Rf /var/www/html/install \
-COPY init.php /var/www/html/users/init.php \
-    RUN chmod 644 /var/www/html/users/init.php
+COPY init.php /var/www/html/users/init.php 
+RUN chmod 644 /var/www/html/users/init.php
